@@ -459,11 +459,6 @@ mystruct_nlmsg serialize_message_tosend(u8 *hwaddr, unsigned int data_len, unsig
 	memcpy(message.src_t, src, ETH_ALEN);
 	memcpy(message.data_t, data, data_len);
 	
-	printf("------------ Data_len: %d ------------\nFrame content: ", data_len);
-	for(int jjj = 0; jjj < (int)data_len; jjj++)
-		printf("0x%x ", (data)[jjj]&0xff);
-	printf("\n");
-	
 	return message;
 }
 
